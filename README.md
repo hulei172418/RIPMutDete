@@ -243,4 +243,7 @@ The main contributions of this study are as follows:
    We implement a prototype toolchain that maps source-level differences onto CFGs and DFGs, performs static analysis along mutation-relevant paths, and produces a unified structured input interface that can be readily consumed by different types of LLMs.  
    **Implementation:** https://anonymous.4open.science/r/ParseRIP-8B58/
 
+3) **Customized mutant generator (MuJava).**  
+We provide a modified version of MuJava to better support our experimental setup for mutant generation and management.  
+**Implementation:** https://anonymous.4open.science/status/mujava-idea-D300
 ---
