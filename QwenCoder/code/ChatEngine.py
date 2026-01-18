@@ -38,18 +38,19 @@ class ChatEngine:
 
         self.model.eval()
         with torch.no_grad():
-            outputs = self.model.generate(
-                inputs,
-                max_new_tokens=max_new_tokens,
-                do_sample=False,
-                temperature=0.1,
-                pad_token_id=self.tokenizer.pad_token_id,
-                eos_token_id=self.tokenizer.eos_token_id,
-                repetition_penalty=1.1,
-                num_return_sequences=1,
-                use_cache=False,
-            )
-            logits = self.model(inputs).logits[0, -1, :]
+            with torch.autocast(device_type='cuda'):
+                outputs = self.model.generate(
+                    inputs,
+                    max_new_tokens=max_new_tokens,
+                    do_sample=False,
+                    temperature=0.1,
+                    pad_token_id=self.tokenizer.pad_token_id,
+                    eos_token_id=self.tokenizer.eos_token_id,
+                    repetition_penalty=1.1,
+                    num_return_sequences=1,
+                    use_cache=False,
+                )
+                logits = self.model(inputs).logits[0, -1, :]
 
        # Decode newly generated tokens
         response_tokens = outputs[0][inputs.shape[1]:]
