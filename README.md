@@ -24,7 +24,7 @@ This repository contains the replication package for our work on equivalent-muta
 
 - OpenAI-model runs: do not consume local GPU resources.
 
-- Dependency list: see requirements.txt
+- Dependency list: see file `requirements.txt`
 
 ---
 
