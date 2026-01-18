@@ -20,7 +20,7 @@ This repository contains the replication package for our work on equivalent-muta
 
 - Embedding-model fine-tuning: follows the official training recipes provided by the original model implementations.
 
-- Hardware (local runs): 3× NVIDIA Tesla V100 (32GB each)
+- Hardware (local runs): A100 GPU (80GB, PCIe)
 
 - OpenAI-model runs: do not consume local GPU resources.
 
@@ -244,6 +244,7 @@ The main contributions of this study are as follows:
    **Implementation:** https://anonymous.4open.science/r/ParseRIP-8B58/
 
 3) **Customized mutant generator (MuJava).**  
-We provide a modified version of MuJava to better support our experimental setup for mutant generation and management.  
-**Implementation:** https://anonymous.4open.science/status/mujava-idea-D300
+   We provide a modified version of MuJava to better support our experimental setup for mutant generation and management.  
+   **Implementation:** https://anonymous.4open.science/status/mujava-idea-D300
+
 ---
