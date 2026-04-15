@@ -49,6 +49,7 @@ class LoRATrainer:
             device_map="auto",
             max_memory=max_memory,
             trust_remote_code=True,
+            attn_implementation="flash_attention_2",
         )
         # Disable use_cache for training with gradient_checkpointing
         model.config.use_cache = False
@@ -94,6 +95,7 @@ class LoRATrainer:
             learning_rate=self.args.learning_rate,
             bf16=use_bf16,
             fp16=not use_bf16,
+            eval_strategy="epoch",
             logging_strategy="epoch",
             optim="adamw_torch",
             save_strategy="epoch",

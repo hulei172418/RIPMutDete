@@ -9,7 +9,7 @@ os.system("python -m QwenCoder.code.run \
     --codebase_data_file=./dataset/Mutant_db_rip.csv \
     --train_data_file=./dataset/Mutant_A_rip.csv \
     --test_data_file=./dataset/Mutant_B_rip.csv \
-    --epoch 10 \
+    --epoch 3 \
     --gradient_accumulation_steps 4\
     --train_batch_size 2 \
     --learning_rate 2e-5 \
