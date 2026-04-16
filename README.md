@@ -237,14 +237,14 @@ The main contributions of this study are as follows:
 
 1. **RIP-guided paired graph evidence for equivalent mutant detection.**  
    We propose an equivalent mutant detection framework guided by the RIP perspective. The framework jointly models the original program and its mutant as aligned CFGs, DFGs, and IR structures. It extracts paired graph evidence (e.g., path predicates and def–use chains) and constructs interpretable, structured prompts to guide LLMs to learn and reason about equivalence along the three RIP dimensions.  
-   **Implementation:** https://anonymous.4open.science/anonymize/RIPMutDete-D5AD/
+   **Implementation:** https://github.com/hulei172418/RIPMutDete
 
 2. **Tool support for multiview program-graph construction and static evidence extraction.**  
    We implement a prototype toolchain that maps source-level differences onto CFGs and DFGs, performs static analysis along mutation-relevant paths, and produces a unified structured input interface that can be readily consumed by different types of LLMs.  
-   **Implementation:** https://anonymous.4open.science/r/ParseRIP-8B58/
+   **Implementation:** https://github.com/hulei172418/ParseRIP
 
 3) **Customized mutant generator (MuJava).**  
    We provide a modified version of MuJava to better support our experimental setup for mutant generation and management.  
-   **Implementation:** https://anonymous.4open.science/status/mujava-idea-D300
+   **Implementation:** https://github.com/hulei172418/mujava-idea
 
 ---
